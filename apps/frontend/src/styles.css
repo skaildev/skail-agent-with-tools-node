@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light dark;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --ok: #16a34a;
+  --bad: #dc2626;
+  --warn: #d97706;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+  background: Canvas;
+  color: CanvasText;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-size: 1rem;
+  margin: 2rem 0 0.5rem;
+}
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+}
+.controls input {
+  flex: 1;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--muted);
+  background: Canvas;
+  color: CanvasText;
+}
+button {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  min-width: 7rem;
+}
+button:disabled,
+.controls input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  color: var(--muted);
+}
+.badge {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--muted);
+  color: #fff;
+  font-size: 0.85rem;
+}
+.badge.active {
+  background: var(--accent);
+}
+.badge.done {
+  background: var(--ok);
+}
+.badge.warn {
+  background: var(--warn);
+}
+.badge.failed {
+  background: var(--bad);
+}
+.pill {
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid var(--muted);
+}
+.error {
+  color: var(--bad);
+}
+.result {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+}
+.result.ok {
+  background: color-mix(in srgb, var(--ok) 18%, transparent);
+}
+.result.warn {
+  background: color-mix(in srgb, var(--warn) 18%, transparent);
+}
+.conversation {
+  margin: 0.5rem 0 0;
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+}
+.timeline {
+  padding-left: 0;
+  font-variant-numeric: tabular-nums;
+}
+.step {
+  list-style: none;
+  margin: 0.25rem 0;
+}
+.step .icon {
+  margin-right: 0.35rem;
+}
+.step time {
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+.step.Invalid {
+  color: var(--warn);
+}
+.step.Handoff,
+.step.Failed {
+  color: var(--bad);
+}
+.step.Answer {
+  color: var(--ok);
+}
+footer {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+a {
+  color: var(--accent);
+}
